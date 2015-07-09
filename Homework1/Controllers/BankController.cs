@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Homework1.Models;
 
-namespace Homework1
+namespace Homework1.Controllers
 {
     public class BankController : Controller
     {
@@ -17,6 +17,7 @@ namespace Homework1
         // GET: Bank
         public ActionResult Index()
         {
+            
             return View(db.客戶銀行資訊.ToList());
         }
 

@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Homework1.Models;
 
-namespace Homework1
+namespace Homework1.Controllers
 {
     public class ContactController : Controller
     {
