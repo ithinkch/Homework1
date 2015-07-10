@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using Homework1.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Homework1.Models;
 
 namespace Homework1.Controllers
 {
@@ -113,6 +109,14 @@ namespace Homework1.Controllers
             db.客戶聯絡人.Remove(客戶聯絡人);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public JsonResult CheckEmail()
+        {
+            bool isValidate = false;
+
+            // Remote 驗證是使用 Get 因此要開放
+            return Json(isValidate, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)
